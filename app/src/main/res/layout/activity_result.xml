@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultActivity"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.Thi.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.Thi.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:weightSum="4"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+
+            >
+
+            <ImageView
+                android:layout_marginRight="8dp"
+                android:src="@drawable/ic_baseline_access_time_24_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:id="@+id/txt_time"
+                android:text="00:10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:width="0dp"
+            >
+            <TextView
+                android:id="@+id/txt_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tốt"
+                android:layout_marginLeft="40dp"
+                android:textSize="20sp"
+                android:layout_gravity="center_vertical"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:width="0dp"
+            >
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/txt_right_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30/30"
+                android:layout_marginLeft="40dp"
+                android:textSize="20sp"
+
+                />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_filter_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="30"
+            android:drawableLeft="@drawable/ic_baseline_grading_24_white"
+            android:textColor="@color/white"
+            android:layout_marginEnd="10dp"
+            />
+
+        <Button
+            android:id="@+id/btn_filter_right_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="30"
+            android:drawableLeft="@drawable/ic_baseline_check_24_white"
+            android:textColor="@color/white"
+            android:layout_marginEnd="10dp"
+            />
+
+        <Button
+            android:id="@+id/btn_filter_wrong_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="30"
+            android:drawableLeft="@drawable/ic_baseline_close_24_white"
+            android:textColor="@color/white"
+            android:layout_marginEnd="10dp"
+            />
+
+        <Button
+            android:id="@+id/btn_filter_no_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="30"
+            android:drawableLeft="@drawable/ic_baseline_donut_large_24_white"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recycler_result"
+        android:layout_margin="10dp"
+
+        />
+
+</LinearLayout>

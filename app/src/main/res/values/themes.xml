@@ -15,4 +15,13 @@
         <item name="android:textColorPrimary">@color/black</item>
 
     </style>
+
+    <style name="Theme.Thi.NoActionBar">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Thi.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Thi.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
