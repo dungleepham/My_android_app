@@ -210,7 +210,6 @@ public class ResultActivity extends AppCompatActivity {
         Intent returnIntent = new Intent();
         returnIntent.putExtra("action", "viewquizanswer");
         setResult(Activity.RESULT_OK, returnIntent);
-
     }
 
     private void doQuizAgain() {

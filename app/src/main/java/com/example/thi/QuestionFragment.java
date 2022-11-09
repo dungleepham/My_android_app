@@ -84,7 +84,7 @@ public class QuestionFragment extends Fragment implements IQuestion {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-       View itemView =  inflater.inflate(R.layout.fragment_question, container, false);
+        View itemView =  inflater.inflate(R.layout.fragment_question, container, false);
         //get question
         questionIndex = getArguments().getInt("index", -1);
         question = Common.questionList.get(questionIndex);
@@ -175,9 +175,19 @@ public class QuestionFragment extends Fragment implements IQuestion {
 
     @Override
     public CurrentQuestion getSelectedAnswer() {
+
         CurrentQuestion currentQuestion = new CurrentQuestion(questionIndex, Common.ANSWER_TYPE.NO_ANSWER);
         StringBuilder result = new StringBuilder();
-        if(Common.selected_values.size() > 1){
+        if(Common.selected_values.size() == 1){
+            Object[] arrayAnswer = Common.selected_values.toArray();
+
+            result.append(new StringBuilder(((String) arrayAnswer[0]).substring(0,1)));
+
+
+
+        }
+
+        else if(Common.selected_values.size() > 1){
             Object[] arrayAnswer = Common.selected_values.toArray();
             for(int i = 0; i < arrayAnswer.length; i++){
                 if(i < arrayAnswer.length - 1){
@@ -188,17 +198,13 @@ public class QuestionFragment extends Fragment implements IQuestion {
                 }
             }
         }
-        else if(Common.selected_values.size() == 1){
-            Object[] arrayAnswer = Common.selected_values.toArray();
-            result.append((String) arrayAnswer[0]).substring(0,1);
 
-        }
 
         if(question != null){
             if(!TextUtils.isEmpty(result)){
                 if (result.toString().equals(question.getCorrectAnswer()))
                     currentQuestion.setType(Common.ANSWER_TYPE.RIGHT_ANSWER);
-                else
+                else //if(result.toString() != question.getCorrectAnswer())
                     currentQuestion.setType(Common.ANSWER_TYPE.WRONG_ANSWER);
             }
             else

@@ -3,19 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/drawable-v24/my_smg_back.xml" value="0.256" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/drawable-v24/opo_msg_back.xml" value="0.256" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/drawable-v24/round_back_light_10.xml" value="0.3495" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/drawable/bg_corners_10dp.xml" value="0.3635" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/drawable/grid_answer_right_answer.xml" value="0.3205" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/drawable/grid_answer_wrong_answer.xml" value="0.3205" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/drawable/grid_question_no_answer.xml" value="0.3205" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/drawable/layout_grid_answer_sheet_item.xml" value="0.3205" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/layout/activity_login.xml" value="0.3625" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/layout/activity_question.xml" value="0.25" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/layout/activity_register.xml" value="0.3625" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/layout/activity_result.xml" value="0.3625" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/layout/app_bar_question.xml" value="0.2753623188405797" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/layout/chat_adapter_layout.xml" value="0.3614583333333333" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/layout/content_question.xml" value="0.29444444444444445" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/layout/custom_dialog.xml" value="0.3614583333333333" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/layout/fragment_account.xml" value="0.3625" />
-        <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/layout/fragment_chat.xml" value="0.3625" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/layout/fragment_chat.xml" value="0.33" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/layout/fragment_login.xml" value="0.3484375" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/layout/fragment_question.xml" value="0.3625" />
@@ -24,6 +30,7 @@
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/layout/layout_category_item.xml" value="0.2635416666666667" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/layout/layout_grid_answer_sheet_item.xml" value="0.5" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/layout/layout_result_items.xml" value="0.3614583333333333" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/layout/messages_adapter_layout.xml" value="0.3625" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/layout/nav_header_question.xml" value="0.2753623188405797" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/layout/quiz_fragment.xml" value="0.3614583333333333" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/layout/rectangle_text_view.xml" value="0.3614583333333333" />
@@ -32,6 +39,7 @@
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/menu/menu_bottom_nav.xml" value="0.3625" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/menu/question.xml" value="0.3625" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/menu/result_menu.xml" value="0.3614583333333333" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/Thi2/app/src/main/res/xml/network_security_config.xml" value="0.25" />
       </map>
     </option>
   </component>

@@ -103,7 +103,7 @@ public class QuestionActivity extends AppCompatActivity {
             //txt_right_answer.setVisibility(View.VISIBLE);
             txt_timer.setVisibility(View.VISIBLE);
 
-            txt_right_answer.setText(new StringBuilder(String.format("%d/%d", Common.right_answer_count, Common.questionList.size())).toString());
+            //txt_right_answer.setText(new StringBuilder(String.format("%d/%d", Common.right_answer_count, Common.questionList.size())).toString());
 
             CountTimer();
 
@@ -111,7 +111,7 @@ public class QuestionActivity extends AppCompatActivity {
            // answer_sheet_view = (RecyclerView) findViewById(R.id.grid_answer);
            // answer_sheet_view.setHasFixedSize(true);
             if(Common.questionList.size() > 5)
-//                answer_sheet_view.setLayoutManager(new GridLayoutManager(this, Common.questionList.size()/2));
+//            answer_sheet_view.setLayoutManager(new GridLayoutManager(this, Common.questionList.size()/2));
 //            answerSheetAdapter = new AnswerSheetAdapter(this, Common.answerSheetList);
 //            answer_sheet_view.setAdapter(answerSheetAdapter);
 
@@ -186,7 +186,7 @@ public class QuestionActivity extends AppCompatActivity {
                     }
                     CurrentQuestion question_state = questionFragment.getSelectedAnswer();
                     Common.answerSheetList.set(subPosition, question_state);
-//                    answerSheetAdapter.notifyDataSetChanged();
+                    //answerSheetAdapter.notifyDataSetChanged();
 
                     countCorrectAnswer();
 
@@ -211,20 +211,27 @@ public class QuestionActivity extends AppCompatActivity {
 
         }
 
-
-
     }
 
 
 
     private void finishGame() {
 
+        for(int i = 0; i < Common.FragmentsList.size();i++) {
+
+            QuestionFragment questionFragment1 = Common.FragmentsList.get(i);
+            questionFragment1.disableAnswer();
+            questionFragment1.showCorrectAnswer();
+        }
         int position = viewPager.getCurrentItem();
+
         QuestionFragment questionFragment = Common.FragmentsList.get(position);
 
         CurrentQuestion question_state = questionFragment.getSelectedAnswer();
         Common.answerSheetList.set(position, question_state);
         //answerSheetAdapter.notifyDataSetChanged();
+
+
 
         countCorrectAnswer();
 
@@ -232,10 +239,8 @@ public class QuestionActivity extends AppCompatActivity {
                 .append("/")
                 .append(String.format("%d", Common.questionList.size())).toString());
         //txt_wrong_answer.setText(String.valueOf(Common.wrong_answer_count));
-        if(question_state.getType() == Common.ANSWER_TYPE.NO_ANSWER){
-            questionFragment.showCorrectAnswer();
-            questionFragment.disableAnswer();
-        }
+
+
         Intent intent = new Intent(QuestionActivity.this, ResultActivity.class);
         Common.timer = Common.TOTAL_TIME - time_play;
         Common.no_answer_count = Common.questionList.size() - (Common.right_answer_count + Common.wrong_answer_count);
@@ -450,6 +455,8 @@ public class QuestionActivity extends AppCompatActivity {
             }
         }
     }
+
+
 
     /* @Override
     public boolean onSupportNavigateUp() {
