@@ -1,6 +1,7 @@
 package com.example.thi;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -22,8 +23,11 @@ public class Login extends AppCompatActivity {
 
     EditText  email, password;
     Button btn_login;
+
     FirebaseAuth auth;
     DatabaseReference reference;
+    public static final String SHARED_PREFS = "sharedPrefs";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,11 +39,15 @@ public class Login extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 
+        checkBox();
         auth = FirebaseAuth.getInstance();
 
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
+
         btn_login = findViewById(R.id.btn_login);
+
+
 
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,7 +66,13 @@ public class Login extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
-                                Intent intent = new Intent(Login.this, MainActivity.class);
+                                SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+                                SharedPreferences.Editor editor = sharedPreferences.edit();
+
+                                editor.putString("name", "true");
+                                editor.apply();
+
+                                Intent intent = new Intent(Login.this, ChatActivity.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                                 startActivity(intent);
                                 finish();
@@ -69,7 +83,21 @@ public class Login extends AppCompatActivity {
                         }
                     });
                 }
+
             }
         });
     }
+
+    private void checkBox(){
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        String check = sharedPreferences.getString("name", "");
+        if(check.equals("true")){
+            Intent intent = new Intent(getApplicationContext(), ChatActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            finish();
+        }
+    }
+
+
 }

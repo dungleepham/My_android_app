@@ -264,13 +264,11 @@ public class QuestionActivity extends AppCompatActivity {
     }
 
     private void genFragmentList() {
-
         for(int i = 0; i < Common.questionList.size(); i++){
             Bundle bundle = new Bundle();
             bundle.putInt("index", i);
             QuestionFragment fragment = new QuestionFragment();
             fragment.setArguments(bundle);
-
             Common.FragmentsList.add(fragment);
         }
     }
@@ -291,6 +289,7 @@ public class QuestionActivity extends AppCompatActivity {
 
                 @Override
                 public void onFinish() {
+                    finishGame();
 
                 }
             }.start();
@@ -455,6 +454,7 @@ public class QuestionActivity extends AppCompatActivity {
             }
         }
     }
+
 
 
 

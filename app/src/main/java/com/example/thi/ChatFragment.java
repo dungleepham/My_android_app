@@ -6,11 +6,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -21,6 +23,10 @@ public class ChatFragment extends Fragment {
 
     MainActivity mMainActivity;
     Button login, register;
+    TextView textView;
+    FirebaseAuth auth;
+
+
 
     @Nullable
     @Override
@@ -30,6 +36,9 @@ public class ChatFragment extends Fragment {
         mMainActivity = (MainActivity) getActivity();
         login = view.findViewById(R.id.login);
         register = view.findViewById(R.id.register);
+        textView = view.findViewById(R.id.txt_or);
+        auth = FirebaseAuth.getInstance();
+
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +54,9 @@ public class ChatFragment extends Fragment {
                 startActivity(new Intent(mMainActivity, Register.class));
             }
         });
+
+
+
 
         return view;
     }
