@@ -193,9 +193,9 @@ public class ResultActivity extends AppCompatActivity {
             case R.id.menu_do_quiz_again:
                 doQuizAgain();
                 break;
-            case R.id.menu_view_answer:
-                viewQuizAnswer();
-                break;
+            //case R.id.menu_view_answer:
+             //   viewQuizAnswer();
+             //   break;
             case R.id.action_home:
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

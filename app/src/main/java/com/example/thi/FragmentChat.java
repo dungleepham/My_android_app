@@ -51,7 +51,7 @@ public class FragmentChat extends Fragment {
         fuser = FirebaseAuth.getInstance().getCurrentUser();
         userList = new ArrayList<>();
 
-        databaseReference = FirebaseDatabase.getInstance().getReference("Chat");
+        databaseReference = FirebaseDatabase.getInstance().getReference("chat");
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

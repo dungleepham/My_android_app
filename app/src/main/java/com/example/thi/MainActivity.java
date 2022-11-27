@@ -52,10 +52,10 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                         finish();
                     }
-                    else{
+                    else {
                         mViewPager.setCurrentItem(1);
                         break;
-                    }
+                       }
 
 
                 case R.id.action_account:
@@ -92,8 +92,8 @@ public class MainActivity extends AppCompatActivity {
                         }
                         else{
                             mNavigationView.getMenu().findItem(R.id.action_chat).setChecked(true);
-                            break;}
-
+                            break;
+                            }
                     case 2:
                         mNavigationView.getMenu().findItem(R.id.action_account).setChecked(true);
                         break;

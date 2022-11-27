@@ -79,8 +79,8 @@ public class ChatActivity extends AppCompatActivity {
         ViewPager viewPager = findViewById(R.id.view_pager);
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
 
-      //  viewPagerAdapter.addFragment(new FragmentChat(), "Chat");
-        viewPagerAdapter.addFragment(new UsersFragment(), "Tin nhắn");
+        viewPagerAdapter.addFragment(new FragmentChat(), "Tin nhắn");
+        viewPagerAdapter.addFragment(new UsersFragment(), "Danh bạ");
 
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
